@@ -1,0 +1,72 @@
+.portfolio {
+  width: 100%;
+  .features {
+    .features__title {
+      text-align: center;
+      h3 {
+        @include welcome-text;
+      }
+
+      h2 {
+        margin-top: 1em;
+      }
+    }
+
+    .features__container {
+      position: relative;
+      margin-top: 4rem;
+    }
+
+    .features__center {
+      display: grid;
+      background-color: $whiteColor;
+      grid-template-columns: repeat(1, 20rem);
+      grid-gap: 2rem;
+      justify-content: center;
+      @include above($bp-sm) {
+        grid-template-columns: repeat(2, minmax(18em, 18.75em));
+        grid-gap: 2rem 1rem;
+      }
+      @include above($bp-laptop) {
+        grid-template-columns: repeat(3, minmax(18em, 19em));
+        grid-gap: 2rem;
+      }
+    }
+
+    .features__item {
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      padding: 2rem;
+      .icon__img {
+        color: white;
+      }
+
+      h4 {
+        font-size: $serviceFont;
+        padding: 0.33em 0;
+      }
+
+      .btn__services {
+        color: $whiteColor;
+        margin-top: 2em;
+        padding: 0.3em 1em;
+        background: $greenColor;
+        font-size: $smFont;
+        span {
+          width: 1.5em;
+          margin-left: 1em;
+        }
+      }
+    }
+
+    .features__img {
+      position: absolute;
+      bottom: -5em;
+      right: -5em;
+      z-index: -1;
+      img {
+        height: 20em;
+      }
+    }
+  }
+}
